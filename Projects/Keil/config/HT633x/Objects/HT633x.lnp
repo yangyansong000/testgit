@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+".\config\ht633x\objects\system_ht6xxx.o"
+".\config\ht633x\objects\startup_ht633x.o"
+".\config\ht633x\objects\ht6xxx_aes&rand.o"
+".\config\ht633x\objects\ht6xxx_cmu.o"
+".\config\ht633x\objects\ht6xxx_crc.o"
+".\config\ht633x\objects\ht6xxx_dma.o"
+".\config\ht633x\objects\ht6xxx_ecc.o"
+".\config\ht633x\objects\ht6xxx_exti.o"
+".\config\ht633x\objects\ht6xxx_flash.o"
+".\config\ht633x\objects\ht6xxx_gpio.o"
+".\config\ht633x\objects\ht6xxx_iic.o"
+".\config\ht633x\objects\ht6xxx_lcd.o"
+".\config\ht633x\objects\ht6xxx_pmu.o"
+".\config\ht633x\objects\ht6xxx_reset.o"
+".\config\ht633x\objects\ht6xxx_rtc.o"
+".\config\ht633x\objects\ht6xxx_spi.o"
+".\config\ht633x\objects\ht6xxx_tbs.o"
+".\config\ht633x\objects\ht6xxx_timer.o"
+".\config\ht633x\objects\ht6xxx_uart&7816.o"
+".\config\ht633x\objects\ht6x3x_emu.o"
+".\config\ht633x\objects\ht6xxx_wdt.o"
+".\config\ht633x\objects\ht6xxx_it.o"
+".\config\ht633x\objects\main.o"
+--library_type=microlib --strict --scatter ".\config\HT633x\Objects\HT633x.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\config\HT633x\Listings\HT633x.map" -o .\config\HT633x\Objects\HT633x.axf

@@ -1,0 +1,36 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\≤‚ ‘≥Ã–Ú\≤‚ ‘≥Ã–Ú\633x≤‚ ‘\HT6xxx_StdPeriphLibV2.0.8_20220506\Projects\Keil\HiTrendtech.uvproj
+Project File Date:  06/02/2022
+
+<h2>Output:</h2>
+Build target 'HT633x'
+linking...
+Program Size: Code=6688 RO-data=224 RW-data=0 ZI-data=16384  
+FromELF: creating hex file...
+After Build - User command #1: fromelf.exe --bin -o "D:\≤‚ ‘≥Ã–Ú\≤‚ ‘≥Ã–Ú\633x≤‚ ‘\HT6xxx_StdPeriphLibV2.0.8_20220506\Projects\Keil\config\HT633x\Objects\HT633x.bin" "D:\≤‚ ‘≥Ã–Ú\≤‚ ‘≥Ã–Ú\633x≤‚ ‘\HT6xxx_StdPeriphLibV2.0.8_20220506\Projects\Keil\config\HT633x\Objects\HT633x.axf"
+".\config\HT633x\Objects\HT633x.axf" - 0 Errors, 0 Warning(s).
+Load "D:\\≤‚ ‘≥Ã–Ú\\≤‚ ‘≥Ã–Ú\\633x≤‚ ‘\\HT6xxx_StdPeriphLibV2.0.8_20220506\\Projects\\Keil\\config\\HT633x\\Objects\\HT633x.axf" 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'HT633x'
+linking...
+Program Size: Code=6688 RO-data=224 RW-data=0 ZI-data=16384  
+FromELF: creating hex file...
+After Build - User command #1: fromelf.exe --bin -o "D:\≤‚ ‘≥Ã–Ú\≤‚ ‘≥Ã–Ú\633x≤‚ ‘\HT6xxx_StdPeriphLibV2.0.8_20220506\Projects\Keil\config\HT633x\Objects\HT633x.bin" "D:\≤‚ ‘≥Ã–Ú\≤‚ ‘≥Ã–Ú\633x≤‚ ‘\HT6xxx_StdPeriphLibV2.0.8_20220506\Projects\Keil\config\HT633x\Objects\HT633x.axf"
+".\config\HT633x\Objects\HT633x.axf" - 0 Errors, 0 Warning(s).
+Load "D:\\≤‚ ‘≥Ã–Ú\\≤‚ ‘≥Ã–Ú\\633x≤‚ ‘\\HT6xxx_StdPeriphLibV2.0.8_20220506\\Projects\\Keil\\config\\HT633x\\Objects\\HT633x.axf" 
+Build target 'HT633x'
+linking...
+Program Size: Code=6688 RO-data=224 RW-data=0 ZI-data=16384  
+FromELF: creating hex file...
+After Build - User command #1: fromelf.exe --bin -o "D:\≤‚ ‘≥Ã–Ú\≤‚ ‘≥Ã–Ú\633x≤‚ ‘\HT6xxx_StdPeriphLibV2.0.8_20220506\Projects\Keil\config\HT633x\Objects\HT633x.bin" "D:\≤‚ ‘≥Ã–Ú\≤‚ ‘≥Ã–Ú\633x≤‚ ‘\HT6xxx_StdPeriphLibV2.0.8_20220506\Projects\Keil\config\HT633x\Objects\HT633x.axf"
+".\config\HT633x\Objects\HT633x.axf" - 0 Errors, 0 Warning(s).
+Load "D:\\≤‚ ‘≥Ã–Ú\\≤‚ ‘≥Ã–Ú\\633x≤‚ ‘\\HT6xxx_StdPeriphLibV2.0.8_20220506\\Projects\\Keil\\config\\HT633x\\Objects\\HT633x.axf" 
+Full Chip Erase Done.
+Programming skipped!

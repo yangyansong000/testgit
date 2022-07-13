@@ -1,0 +1,17 @@
+.\config\ht633x\objects\tasks.o: ..\..\FreeRTOS\tasks.c
+.\config\ht633x\objects\tasks.o: D:\keil525\ARM\ARMCC\Bin\..\include\stdlib.h
+.\config\ht633x\objects\tasks.o: D:\keil525\ARM\ARMCC\Bin\..\include\string.h
+.\config\ht633x\objects\tasks.o: ..\..\FreeRTOS\include\FreeRTOS.h
+.\config\ht633x\objects\tasks.o: D:\keil525\ARM\ARMCC\Bin\..\include\stddef.h
+.\config\ht633x\objects\tasks.o: D:\keil525\ARM\ARMCC\Bin\..\include\stdint.h
+.\config\ht633x\objects\tasks.o: ..\..\FreeRTOS\include\FreeRTOSConfig.h
+.\config\ht633x\objects\tasks.o: ..\..\FreeRTOS\include\projdefs.h
+.\config\ht633x\objects\tasks.o: ..\..\FreeRTOS\include\portable.h
+.\config\ht633x\objects\tasks.o: ..\..\FreeRTOS\include\deprecated_definitions.h
+.\config\ht633x\objects\tasks.o: ..\..\FreeRTOS\portable\RVDS\ARM_CM3\portmacro.h
+.\config\ht633x\objects\tasks.o: ..\..\FreeRTOS\include\mpu_wrappers.h
+.\config\ht633x\objects\tasks.o: ..\..\FreeRTOS\include\task.h
+.\config\ht633x\objects\tasks.o: ..\..\FreeRTOS\include\list.h
+.\config\ht633x\objects\tasks.o: ..\..\FreeRTOS\include\timers.h
+.\config\ht633x\objects\tasks.o: ..\..\FreeRTOS\include\stack_macros.h
+.\config\ht633x\objects\tasks.o: D:\keil525\ARM\ARMCC\Bin\..\include\stdio.h

@@ -1,0 +1,27 @@
+--cpu Cortex-M0
+".\config\ht501x\objects\system_ht6xxx.o"
+".\config\ht501x\objects\startup_ht501x.o"
+".\config\ht501x\objects\ht6xxx_aes&rand.o"
+".\config\ht501x\objects\ht6xxx_cmu.o"
+".\config\ht501x\objects\ht6xxx_dma.o"
+".\config\ht501x\objects\ht6xxx_exti.o"
+".\config\ht501x\objects\ht6xxx_flash.o"
+".\config\ht501x\objects\ht6xxx_gpio.o"
+".\config\ht501x\objects\ht6xxx_iic.o"
+".\config\ht501x\objects\ht6xxx_lcd.o"
+".\config\ht501x\objects\ht6xxx_pmu.o"
+".\config\ht501x\objects\ht6xxx_reset.o"
+".\config\ht501x\objects\ht6xxx_rtc.o"
+".\config\ht501x\objects\ht6xxx_spi.o"
+".\config\ht501x\objects\ht6xxx_tbs.o"
+".\config\ht501x\objects\ht6xxx_timer.o"
+".\config\ht501x\objects\ht6xxx_uart&7816.o"
+".\config\ht501x\objects\ht501x_keyscan.o"
+".\config\ht501x\objects\ht50xx_emu.o"
+".\config\ht501x\objects\ht6xxx_wdt.o"
+".\config\ht501x\objects\ht6xxx_it.o"
+".\config\ht501x\objects\main.o"
+--library_type=microlib --strict --scatter ".\config\HT501x\Objects\HT501x.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\config\HT501x\Listings\HT501x.map" -o .\config\HT501x\Objects\HT501x.axf

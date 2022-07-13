@@ -1,0 +1,15 @@
+.\config\ht633x\objects\timers.o: ..\..\FreeRTOS\timers.c
+.\config\ht633x\objects\timers.o: D:\keil525\ARM\ARMCC\Bin\..\include\stdlib.h
+.\config\ht633x\objects\timers.o: ..\..\FreeRTOS\include\FreeRTOS.h
+.\config\ht633x\objects\timers.o: D:\keil525\ARM\ARMCC\Bin\..\include\stddef.h
+.\config\ht633x\objects\timers.o: D:\keil525\ARM\ARMCC\Bin\..\include\stdint.h
+.\config\ht633x\objects\timers.o: ..\..\FreeRTOS\include\FreeRTOSConfig.h
+.\config\ht633x\objects\timers.o: ..\..\FreeRTOS\include\projdefs.h
+.\config\ht633x\objects\timers.o: ..\..\FreeRTOS\include\portable.h
+.\config\ht633x\objects\timers.o: ..\..\FreeRTOS\include\deprecated_definitions.h
+.\config\ht633x\objects\timers.o: ..\..\FreeRTOS\portable\RVDS\ARM_CM3\portmacro.h
+.\config\ht633x\objects\timers.o: ..\..\FreeRTOS\include\mpu_wrappers.h
+.\config\ht633x\objects\timers.o: ..\..\FreeRTOS\include\task.h
+.\config\ht633x\objects\timers.o: ..\..\FreeRTOS\include\list.h
+.\config\ht633x\objects\timers.o: ..\..\FreeRTOS\include\queue.h
+.\config\ht633x\objects\timers.o: ..\..\FreeRTOS\include\timers.h

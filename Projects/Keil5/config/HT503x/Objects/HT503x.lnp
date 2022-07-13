@@ -1,0 +1,32 @@
+--cpu Cortex-M0
+".\config\ht503x\objects\system_ht6xxx.o"
+".\config\ht503x\objects\startup_ht503x.o"
+".\config\ht503x\objects\ht6xxx_aes&rand.o"
+".\config\ht503x\objects\ht6xxx_cmu.o"
+".\config\ht503x\objects\ht6xxx_crc.o"
+".\config\ht503x\objects\ht6xxx_dma.o"
+".\config\ht503x\objects\ht6xxx_ecc.o"
+".\config\ht503x\objects\ht6xxx_exti.o"
+".\config\ht503x\objects\ht6xxx_flash.o"
+".\config\ht503x\objects\ht6xxx_gpio.o"
+".\config\ht503x\objects\ht6xxx_iic.o"
+".\config\ht503x\objects\ht6xxx_lcd.o"
+".\config\ht503x\objects\ht6xxx_pmu.o"
+".\config\ht503x\objects\ht6xxx_reset.o"
+".\config\ht503x\objects\ht6xxx_rtc.o"
+".\config\ht503x\objects\ht6xxx_spi.o"
+".\config\ht503x\objects\ht6xxx_tbs.o"
+".\config\ht503x\objects\ht6xxx_timer.o"
+".\config\ht503x\objects\ht6xxx_uart&7816.o"
+".\config\ht503x\objects\ht501x_keyscan.o"
+".\config\ht503x\objects\ht50xx_emu.o"
+".\config\ht503x\objects\ht6xxx_wdt.o"
+".\config\ht503x\objects\ht5x3x_frampack.o"
+".\config\ht503x\objects\ht5x3x_emuiface.o"
+".\config\ht503x\objects\ht6xxx_it.o"
+".\config\ht503x\objects\main.o"
+--library_type=microlib --strict --scatter ".\config\HT503x\Objects\HT503x.sct"
+
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\config\HT503x\Listings\HT503x.map" -o .\config\HT503x\Objects\HT503x.axf

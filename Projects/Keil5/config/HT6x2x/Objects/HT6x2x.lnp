@@ -1,0 +1,28 @@
+--cpu Cortex-M0
+".\config\ht6x2x\objects\system_ht6xxx.o"
+".\config\ht6x2x\objects\startup_ht6x2x.o"
+".\config\ht6x2x\objects\ht6xxx_aes&rand.o"
+".\config\ht6x2x\objects\ht6xxx_cmu.o"
+".\config\ht6x2x\objects\ht6xxx_crc.o"
+".\config\ht6x2x\objects\ht6xxx_dma.o"
+".\config\ht6x2x\objects\ht6xxx_exti.o"
+".\config\ht6x2x\objects\ht6xxx_flash.o"
+".\config\ht6x2x\objects\ht6xxx_gpio.o"
+".\config\ht6x2x\objects\ht6xxx_iic.o"
+".\config\ht6x2x\objects\ht6xxx_lcd.o"
+".\config\ht6x2x\objects\ht6xxx_pmu.o"
+".\config\ht6x2x\objects\ht6xxx_reset.o"
+".\config\ht6x2x\objects\ht6xxx_rtc.o"
+".\config\ht6x2x\objects\ht6xxx_spi.o"
+".\config\ht6x2x\objects\ht6xxx_tbs.o"
+".\config\ht6x2x\objects\ht6xxx_tdes&rand.o"
+".\config\ht6x2x\objects\ht6xxx_timer.o"
+".\config\ht6x2x\objects\ht6xxx_uart&7816.o"
+".\config\ht6x2x\objects\ht6xxx_wdt.o"
+".\config\ht6x2x\objects\ht6xxx_it.o"
+".\config\ht6x2x\objects\main.o"
+--library_type=microlib --strict --scatter ".\config\HT6x2x\Objects\HT6x2x.sct"
+
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\config\HT6x2x\Listings\HT6x2x.map" -o .\config\HT6x2x\Objects\HT6x2x.axf

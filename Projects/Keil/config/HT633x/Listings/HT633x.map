@@ -1,0 +1,1055 @@
+ARM Linker, 5.03 [Build 76] [MDK-ARM Standard]
+
+==============================================================================
+
+Section Cross References
+
+    startup_ht633x.o(RESET) refers to startup_ht633x.o(STACK) for __initial_sp
+    startup_ht633x.o(RESET) refers to startup_ht633x.o(.text) for Reset_Handler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.NMI_Handler) for NMI_Handler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.HardFault_Handler) for HardFault_Handler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.SVC_Handler) for SVC_Handler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.PendSV_Handler) for PendSV_Handler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.SysTick_Handler) for SysTick_Handler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.PMU_IRQHandler) for PMU_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.AES_IRQHandler) for AES_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.EXTI0_IRQHandler) for EXTI0_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.EXTI1_IRQHandler) for EXTI1_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.EXTI2_IRQHandler) for EXTI2_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.EXTI3_IRQHandler) for EXTI3_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.EXTI4_IRQHandler) for EXTI4_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.EXTI5_IRQHandler) for EXTI5_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.EXTI6_IRQHandler) for EXTI6_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.UART0_IRQHandler) for UART0_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.UART1_IRQHandler) for UART1_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.UART2_IRQHandler) for UART2_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.UART3_IRQHandler) for UART3_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.UART4_IRQHandler) for UART4_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.UART5_IRQHandler) for UART5_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.TIMER_0_IRQHandler) for TIMER_0_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.TIMER_1_IRQHandler) for TIMER_1_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.TIMER_2_IRQHandler) for TIMER_2_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.TIMER_3_IRQHandler) for TIMER_3_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.TBS_IRQHandler) for TBS_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.RTC_IRQHandler) for RTC_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.I2C_IRQHandler) for I2C_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.SPI0_IRQHandler) for SPI0_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.SPI1_IRQHandler) for SPI1_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.SelfTestFreq_IRQHandler) for SelfTestFreq_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.TIMER_4_IRQHandler) for TIMER_4_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.TIMER_5_IRQHandler) for TIMER_5_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.UART6_IRQHandler) for UART6_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.EXTI7_9_IRQHandler) for EXTI7_9_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.SPI2_IRQHandler) for SPI2_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.DMA_IRQHandler) for DMA_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.EXTI10_14_IRQHandler) for EXTI10_14_IRQHandler
+    startup_ht633x.o(RESET) refers to ht6xxx_it.o(i.SPI3_IRQHandler) for SPI3_IRQHandler
+    startup_ht633x.o(.text) refers to system_ht6xxx.o(i.SystemInit) for SystemInit
+    startup_ht633x.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    ht6xxx_aes&rand.o(i.HT_AES_Decrypt) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_aes&rand.o(i.HT_AES_Encrypt) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_aes&rand.o(i.HT_AES_GHASH_RAND_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_aes&rand.o(i.HT_AES_GHASH_RAND_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_aes&rand.o(i.HT_AES_GHASH_RAND_ITFlagStatusGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_aes&rand.o(i.HT_RAND_BackMode_Config) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_aes&rand.o(i.HT_RAND_WorkState) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_cmu.o(i.HT_CMU_CPllSet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_cmu.o(i.HT_CMU_CTRL_2T_Set) refers to ht6xxx_cmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_cmu.o(i.HT_CMU_Cache_Set) refers to ht6xxx_cmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_cmu.o(i.HT_CMU_ClkCtrl0Config) refers to ht6xxx_cmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_cmu.o(i.HT_CMU_ClkCtrl1Config) refers to ht6xxx_cmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_cmu.o(i.HT_CMU_ClkoutSet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_cmu.o(i.HT_CMU_ClkoutSet) refers to ht6xxx_cmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_cmu.o(i.HT_CMU_FLASH_LATENCY_Set) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_cmu.o(i.HT_CMU_FLASH_LATENCY_Set) refers to ht6xxx_cmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_cmu.o(i.HT_CMU_HRCCLK_Set) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_cmu.o(i.HT_CMU_HRCCLK_Set) refers to ht6xxx_cmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_cmu.o(i.HT_CMU_Init) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_cmu.o(i.HT_CMU_Init) refers to ht6xxx_cmu.o(i.WaitPllLock) for WaitPllLock
+    ht6xxx_cmu.o(i.HT_CMU_Init) refers to ht6xxx_cmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_cmu.o(i.HT_CMU_StopFlagGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_cmu.o(i.WaitPllLock) refers to ht6xxx_cmu.o(i.HT_CMU_SysClkGet) for HT_CMU_SysClkGet
+    ht6xxx_crc.o(i.HT_CRC_DataCalc) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_crc.o(i.HT_CRC_DataCalc) refers to ht6xxx_crc.o(.data) for crc_using
+    ht6xxx_crc.o(i.HT_CRC_ModeSelect) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_dma.o(i.HT_DMA_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_dma.o(i.HT_DMA_Cmd) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_dma.o(i.HT_DMA_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_dma.o(i.HT_DMA_ITFlagStatusGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_dma.o(i.HT_DMA_Init) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_ecc.o(i.HT_ECC_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_ecc.o(i.HT_ECC_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_ecc.o(i.HT_ECC_ITFlagStatusGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_exti.o(i.HT_EXTIFall_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_exti.o(i.HT_EXTIFall_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_exti.o(i.HT_EXTIFall_ITFlagStatusGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_exti.o(i.HT_EXTIRise_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_exti.o(i.HT_EXTIRise_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_exti.o(i.HT_EXTIRise_ITFlagStatusGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_exti.o(i.HT_EXTI_FilterConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_flash.o(i.HT_Flash_ByteRead) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_flash.o(i.HT_Flash_ByteRead) refers to ht6xxx_flash.o(.constdata) for RegisterWriteProtect
+    ht6xxx_flash.o(i.HT_Flash_ChipErase) refers to ht6xxx_flash.o(.constdata) for RegisterWriteProtect
+    ht6xxx_flash.o(i.HT_Flash_EWR_Pro) refers to ht6xxx_flash.o(.constdata) for RegisterWriteProtect
+    ht6xxx_flash.o(i.HT_Flash_HalfWordRead) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_flash.o(i.HT_Flash_HalfWordRead) refers to ht6xxx_flash.o(.constdata) for RegisterWriteProtect
+    ht6xxx_flash.o(i.HT_Flash_PageEraseWithSectionUnlock) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_flash.o(i.HT_Flash_PageEraseWithSectionUnlock) refers to ht6xxx_flash.o(.constdata) for RegisterWriteProtect
+    ht6xxx_flash.o(i.HT_Flash_WordRead) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_flash.o(i.HT_Flash_WordRead) refers to ht6xxx_flash.o(.constdata) for RegisterWriteProtect
+    ht6xxx_flash.o(i.HT_Info_ByteRead) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_flash.o(i.HT_Info_ByteRead) refers to ht6xxx_flash.o(.constdata) for RegisterWriteProtect
+    ht6xxx_flash.o(i.HT_Info_EWR_Pro) refers to ht6xxx_flash.o(.constdata) for RegisterWriteProtect
+    ht6xxx_flash.o(i.HT_Info_HalfWordRead) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_flash.o(i.HT_Info_HalfWordRead) refers to ht6xxx_flash.o(.constdata) for RegisterWriteProtect
+    ht6xxx_flash.o(i.HT_Info_WordRead) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_flash.o(i.HT_Info_WordRead) refers to ht6xxx_flash.o(.constdata) for RegisterWriteProtect
+    ht6xxx_gpio.o(i.HT_GPIO_AFInit) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_gpio.o(i.HT_GPIO_BitsRead) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_gpio.o(i.HT_GPIO_BitsReset) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_gpio.o(i.HT_GPIO_BitsSet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_gpio.o(i.HT_GPIO_BitsToggle) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_gpio.o(i.HT_GPIO_DirectionSet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_gpio.o(i.HT_GPIO_HighCurrentSet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_gpio.o(i.HT_GPIO_High_Resistance_Set) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_gpio.o(i.HT_GPIO_Init) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_gpio.o(i.HT_GPIO_InputFilter) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_gpio.o(i.HT_GPIO_InputStatusSet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_gpio.o(i.HT_GPIO_OutputStatusSet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_iic.o(i.HT_I2C_Init) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_iic.o(i.HT_I2C_Init) refers to ht6xxx_cmu.o(i.HT_CMU_SysClkGet) for HT_CMU_SysClkGet
+    ht6xxx_iic.o(i.HT_I2C_Master_Receive) refers to ht6xxx_iic.o(i.HT_I2C_Start) for HT_I2C_Start
+    ht6xxx_iic.o(i.HT_I2C_Master_Receive) refers to ht6xxx_iic.o(i.HT_I2C_ITFlagStatusGet) for HT_I2C_ITFlagStatusGet
+    ht6xxx_iic.o(i.HT_I2C_Master_Transmit) refers to ht6xxx_iic.o(i.HT_I2C_Start) for HT_I2C_Start
+    ht6xxx_iic.o(i.HT_I2C_Master_Transmit) refers to ht6xxx_iic.o(i.HT_I2C_ITFlagStatusGet) for HT_I2C_ITFlagStatusGet
+    ht6xxx_iic.o(i.HT_I2C_Master_Transmit_IT) refers to ht6xxx_iic.o(i.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    ht6xxx_iic.o(i.HT_I2C_Master_Transmit_IT) refers to ht6xxx_iic.o(i.HT_I2C_Start) for HT_I2C_Start
+    ht6xxx_iic.o(i.HT_I2C_Master_Transmit_IT) refers to ht6xxx_iic.o(i.HT_I2C_ITFlagStatusGet) for HT_I2C_ITFlagStatusGet
+    ht6xxx_iic.o(i.HT_I2C_Slave_Receive) refers to ht6xxx_iic.o(i.HT_I2C_ITFlagStatusGet) for HT_I2C_ITFlagStatusGet
+    ht6xxx_iic.o(i.HT_I2C_Slave_Transmit) refers to ht6xxx_iic.o(i.HT_I2C_ITFlagStatusGet) for HT_I2C_ITFlagStatusGet
+    ht6xxx_lcd.o(i.HT_LCD_Init) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_pmu.o(i.HT_LDO_LP_VoltConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_pmu.o(i.HT_LDO_LP_VoltConfig) refers to ht6xxx_pmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_pmu.o(i.HT_PMUState_FlagStatusGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_pmu.o(i.HT_PMU_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_pmu.o(i.HT_PMU_HoldLDOConfig) refers to ht6xxx_pmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_pmu.o(i.HT_PMU_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_pmu.o(i.HT_PMU_ITFlagStatusGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_pmu.o(i.HT_PMU_Init) refers to ht6xxx_pmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_pmu.o(i.HT_PMU_LPRunConfig) refers to ht6xxx_pmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_pmu.o(i.HT_PMU_LowpowerVref_TcConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_pmu.o(i.HT_PMU_LowpowerVref_TcConfig) refers to ht6xxx_pmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_pmu.o(i.HT_PMU_LowpowerVref_TvConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_pmu.o(i.HT_PMU_LowpowerVref_TvConfig) refers to ht6xxx_pmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_pmu.o(i.HT_PMU_NormalVref_TrimConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_pmu.o(i.HT_PMU_NormalVref_TrimConfig) refers to ht6xxx_pmu.o(.constdata) for RegisterWriteProtect
+    ht6xxx_rtc.o(i.HT_RTCSTAMP_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTCSTAMP_GetEventCount) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTCSTAMP_GetTriggerSource) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTCSTAMP_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTCSTAMP_ITFlagStatusGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTC_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTC_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTC_ITFlagStatusGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTC_Init) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTC_LoadInfoData) refers to ht6xxx_rtc.o(.constdata) for RegisterWriteProtect
+    ht6xxx_rtc.o(i.HT_RTC_RTCBACKUP_Read) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTC_RTCBACKUP_Write) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTC_RTCCLK_CFG) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTC_TMRConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTC_ToutSet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTC_Write) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_rtc.o(i.HT_RTC_Write) refers to ht6xxx_rtc.o(.constdata) for RegisterWriteProtect
+    ht6xxx_spi.o(i.HT_SPI_CSHigh) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_spi.o(i.HT_SPI_CSLow) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_spi.o(i.HT_SPI_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_spi.o(i.HT_SPI_ITFlagStatusGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_spi.o(i.HT_SPI_Init) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_spi.o(i.HT_SPI_SendByte) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_spi.o(i.HT_SPI_SendByte) refers to ht6xxx_spi.o(i.HT_SPI_ClearITPendingBit) for HT_SPI_ClearITPendingBit
+    ht6xxx_spi.o(i.HT_SPI_SendByte) refers to ht6xxx_spi.o(i.HT_SPI_ITFlagStatusGet) for HT_SPI_ITFlagStatusGet
+    ht6xxx_tbs.o(i.HT_TBSConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_tbs.o(i.HT_TBS_ADCInjectSample) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_tbs.o(i.HT_TBS_ADCTriSample) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_tbs.o(i.HT_TBS_CMPThresholdSet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_tbs.o(i.HT_TBS_CMUClkConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_tbs.o(i.HT_TBS_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_tbs.o(i.HT_TBS_ClkSelConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_tbs.o(i.HT_TBS_FilCntConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_tbs.o(i.HT_TBS_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_tbs.o(i.HT_TBS_ITFlagStatusGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_tbs.o(i.HT_TBS_PeriodSet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_tbs.o(i.HT_TBS_ValueRead) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_timer.o(i.HT_TMRExt_Init) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_timer.o(i.HT_TMR_CaptureGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_timer.o(i.HT_TMR_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_timer.o(i.HT_TMR_Cmd) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_timer.o(i.HT_TMR_CompareSet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_timer.o(i.HT_TMR_CountGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_timer.o(i.HT_TMR_CounterSet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_timer.o(i.HT_TMR_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_timer.o(i.HT_TMR_ITFlagStatusGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_timer.o(i.HT_TMR_Init) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_timer.o(i.HT_TMR_PeriodSet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_timer.o(i.HT_TMR_PrescalerSet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_uart&7816.o(i.HT_IR_Init) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_uart&7816.o(i.HT_IR_Init) refers to ht6xxx_uart&7816.o(i.HT_UART_Init) for HT_UART_Init
+    ht6xxx_uart&7816.o(i.HT_ISO7816_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_uart&7816.o(i.HT_ISO7816_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_uart&7816.o(i.HT_ISO7816_ITFlagStatusGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_uart&7816.o(i.HT_ISO7816_Init) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_uart&7816.o(i.HT_ISO7816_Init) refers to ht6xxx_cmu.o(i.HT_CMU_SysClkGet) for HT_CMU_SysClkGet
+    ht6xxx_uart&7816.o(i.HT_ISO7816_ReceiveData) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_uart&7816.o(i.HT_ISO7816_SendData) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_uart&7816.o(i.HT_UART_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_uart&7816.o(i.HT_UART_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_uart&7816.o(i.HT_UART_ITFlagStatusGet) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_uart&7816.o(i.HT_UART_Init) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_uart&7816.o(i.HT_UART_Init) refers to ht6xxx_cmu.o(i.HT_CMU_SysClkGet) for HT_CMU_SysClkGet
+    ht6xxx_uart&7816.o(i.HT_UART_Init) refers to dfltui.o(.text) for __aeabi_ui2d
+    ht6xxx_uart&7816.o(i.HT_UART_Init) refers to ddiv.o(.text) for __aeabi_ddiv
+    ht6xxx_uart&7816.o(i.HT_UART_Init) refers to dadd.o(.text) for __aeabi_dsub
+    ht6xxx_uart&7816.o(i.HT_UART_Init) refers to dfixui.o(.text) for __aeabi_d2uiz
+    ht6xxx_uart&7816.o(i.HT_UART_Init) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    ht6xxx_uart&7816.o(i.HT_UART_RXFilterConfig) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_uart&7816.o(i.HT_UART_ReceiveData) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_uart&7816.o(i.HT_UART_SendData) refers to main.o(i.assert_failed) for assert_failed
+    ht6x3x_emu.o(i.HT_EMU_Const_Init) refers to main.o(i.assert_failed) for assert_failed
+    ht6x3x_emu.o(i.HT_EMU_Const_Init) refers to ht6x3x_emu.o(.constdata) for RegisterWriteProtect
+    ht6x3x_emu.o(i.HT_EMU_EMUCLK_Config) refers to main.o(i.assert_failed) for assert_failed
+    ht6x3x_emu.o(i.HT_EMU_EMUCLK_Config) refers to ht6x3x_emu.o(.constdata) for RegisterWriteProtect
+    ht6x3x_emu.o(i.HT_EMU_RegisterRead) refers to main.o(i.assert_failed) for assert_failed
+    ht6x3x_emu.o(i.HT_EMU_RegisterWrite) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_wdt.o(i.HT_FreeDog_WithPara) refers to main.o(i.assert_failed) for assert_failed
+    ht6xxx_wdt.o(i.HT_FreeDog_WithPara) refers to dmul.o(.text) for __aeabi_dmul
+    ht6xxx_wdt.o(i.HT_FreeDog_WithPara) refers to dfixui.o(.text) for __aeabi_d2uiz
+    ht6xxx_wdt.o(i.HT_FreeDog_WithPara) refers to ddiv.o(.text) for __aeabi_ddiv
+    ht6xxx_wdt.o(i.HT_FreeDog_WithPara) refers to dadd.o(.text) for __aeabi_dsub
+    ht6xxx_it.o(i.AES_IRQHandler) refers to ht6xxx_ecc.o(i.HT_ECC_ITFlagStatusGet) for HT_ECC_ITFlagStatusGet
+    ht6xxx_it.o(i.AES_IRQHandler) refers to ht6xxx_ecc.o(i.HT_ECC_ClearITPendingBit) for HT_ECC_ClearITPendingBit
+    ht6xxx_it.o(i.AES_IRQHandler) refers to ht6xxx_aes&rand.o(i.HT_AES_GHASH_RAND_ITFlagStatusGet) for HT_AES_GHASH_RAND_ITFlagStatusGet
+    ht6xxx_it.o(i.AES_IRQHandler) refers to ht6xxx_aes&rand.o(i.HT_AES_GHASH_RAND_ClearITPendingBit) for HT_AES_GHASH_RAND_ClearITPendingBit
+    ht6xxx_it.o(i.DMA_IRQHandler) refers to ht6xxx_it.o(i.DMA_IRQProc) for DMA_IRQProc
+    ht6xxx_it.o(i.DMA_IRQProc) refers to ht6xxx_dma.o(i.HT_DMA_ITFlagStatusGet) for HT_DMA_ITFlagStatusGet
+    ht6xxx_it.o(i.DMA_IRQProc) refers to ht6xxx_dma.o(i.HT_DMA_ClearITPendingBit) for HT_DMA_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI0_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ITFlagStatusGet) for HT_EXTIRise_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI0_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ClearITPendingBit) for HT_EXTIRise_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI0_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ITFlagStatusGet) for HT_EXTIFall_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI0_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ClearITPendingBit) for HT_EXTIFall_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI10_14_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ITFlagStatusGet) for HT_EXTIRise_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI10_14_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ClearITPendingBit) for HT_EXTIRise_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI10_14_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ITFlagStatusGet) for HT_EXTIFall_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI10_14_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ClearITPendingBit) for HT_EXTIFall_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI1_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ITFlagStatusGet) for HT_EXTIRise_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI1_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ClearITPendingBit) for HT_EXTIRise_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI1_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ITFlagStatusGet) for HT_EXTIFall_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI1_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ClearITPendingBit) for HT_EXTIFall_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI2_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ITFlagStatusGet) for HT_EXTIRise_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI2_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ClearITPendingBit) for HT_EXTIRise_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI2_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ITFlagStatusGet) for HT_EXTIFall_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI2_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ClearITPendingBit) for HT_EXTIFall_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI3_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ITFlagStatusGet) for HT_EXTIRise_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI3_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ClearITPendingBit) for HT_EXTIRise_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI3_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ITFlagStatusGet) for HT_EXTIFall_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI3_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ClearITPendingBit) for HT_EXTIFall_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI4_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ITFlagStatusGet) for HT_EXTIRise_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI4_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ClearITPendingBit) for HT_EXTIRise_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI4_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ITFlagStatusGet) for HT_EXTIFall_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI4_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ClearITPendingBit) for HT_EXTIFall_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI5_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ITFlagStatusGet) for HT_EXTIRise_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI5_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ClearITPendingBit) for HT_EXTIRise_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI5_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ITFlagStatusGet) for HT_EXTIFall_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI5_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ClearITPendingBit) for HT_EXTIFall_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI6_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ITFlagStatusGet) for HT_EXTIRise_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI6_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ClearITPendingBit) for HT_EXTIRise_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI6_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ITFlagStatusGet) for HT_EXTIFall_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI6_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ClearITPendingBit) for HT_EXTIFall_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI7_9_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ITFlagStatusGet) for HT_EXTIRise_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI7_9_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIRise_ClearITPendingBit) for HT_EXTIRise_ClearITPendingBit
+    ht6xxx_it.o(i.EXTI7_9_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ITFlagStatusGet) for HT_EXTIFall_ITFlagStatusGet
+    ht6xxx_it.o(i.EXTI7_9_IRQHandler) refers to ht6xxx_exti.o(i.HT_EXTIFall_ClearITPendingBit) for HT_EXTIFall_ClearITPendingBit
+    ht6xxx_it.o(i.I2C_IRQHandler) refers to ht6xxx_iic.o(i.HT_I2C_IRQHandler_Default) for HT_I2C_IRQHandler_Default
+    ht6xxx_it.o(i.NMI_Handler) refers to ht6xxx_cmu.o(i.HT_CMU_StopFlagGet) for HT_CMU_StopFlagGet
+    ht6xxx_it.o(i.PMU_IRQHandler) refers to ht6xxx_pmu.o(i.HT_PMU_ITFlagStatusGet) for HT_PMU_ITFlagStatusGet
+    ht6xxx_it.o(i.PMU_IRQHandler) refers to ht6xxx_pmu.o(i.HT_PMU_ClearITPendingBit) for HT_PMU_ClearITPendingBit
+    ht6xxx_it.o(i.SPI0_IRQHandler) refers to ht6xxx_spi.o(i.HT_SPI_ITFlagStatusGet) for HT_SPI_ITFlagStatusGet
+    ht6xxx_it.o(i.SPI0_IRQHandler) refers to ht6xxx_spi.o(i.HT_SPI_ClearITPendingBit) for HT_SPI_ClearITPendingBit
+    ht6xxx_it.o(i.SPI1_IRQHandler) refers to ht6xxx_spi.o(i.HT_SPI_ITFlagStatusGet) for HT_SPI_ITFlagStatusGet
+    ht6xxx_it.o(i.SPI1_IRQHandler) refers to ht6xxx_spi.o(i.HT_SPI_ClearITPendingBit) for HT_SPI_ClearITPendingBit
+    ht6xxx_it.o(i.SPI2_IRQHandler) refers to ht6xxx_spi.o(i.HT_SPI_ITFlagStatusGet) for HT_SPI_ITFlagStatusGet
+    ht6xxx_it.o(i.SPI2_IRQHandler) refers to ht6xxx_spi.o(i.HT_SPI_ClearITPendingBit) for HT_SPI_ClearITPendingBit
+    ht6xxx_it.o(i.SPI3_IRQHandler) refers to ht6xxx_spi.o(i.HT_SPI_ITFlagStatusGet) for HT_SPI_ITFlagStatusGet
+    ht6xxx_it.o(i.SPI3_IRQHandler) refers to ht6xxx_spi.o(i.HT_SPI_ClearITPendingBit) for HT_SPI_ClearITPendingBit
+    ht6xxx_it.o(i.TBS_IRQHandler) refers to ht6xxx_tbs.o(i.HT_TBS_ITFlagStatusGet) for HT_TBS_ITFlagStatusGet
+    ht6xxx_it.o(i.TBS_IRQHandler) refers to ht6xxx_tbs.o(i.HT_TBS_ClearITPendingBit) for HT_TBS_ClearITPendingBit
+    ht6xxx_it.o(i.TIMER_0_IRQHandler) refers to ht6xxx_timer.o(i.HT_TMR_ITFlagStatusGet) for HT_TMR_ITFlagStatusGet
+    ht6xxx_it.o(i.TIMER_0_IRQHandler) refers to ht6xxx_timer.o(i.HT_TMR_ClearITPendingBit) for HT_TMR_ClearITPendingBit
+    ht6xxx_it.o(i.TIMER_1_IRQHandler) refers to ht6xxx_timer.o(i.HT_TMR_ITFlagStatusGet) for HT_TMR_ITFlagStatusGet
+    ht6xxx_it.o(i.TIMER_1_IRQHandler) refers to ht6xxx_timer.o(i.HT_TMR_ClearITPendingBit) for HT_TMR_ClearITPendingBit
+    ht6xxx_it.o(i.TIMER_2_IRQHandler) refers to ht6xxx_timer.o(i.HT_TMR_ITFlagStatusGet) for HT_TMR_ITFlagStatusGet
+    ht6xxx_it.o(i.TIMER_2_IRQHandler) refers to ht6xxx_timer.o(i.HT_TMR_ClearITPendingBit) for HT_TMR_ClearITPendingBit
+    ht6xxx_it.o(i.TIMER_3_IRQHandler) refers to ht6xxx_timer.o(i.HT_TMR_ITFlagStatusGet) for HT_TMR_ITFlagStatusGet
+    ht6xxx_it.o(i.TIMER_3_IRQHandler) refers to ht6xxx_timer.o(i.HT_TMR_ClearITPendingBit) for HT_TMR_ClearITPendingBit
+    ht6xxx_it.o(i.TIMER_4_IRQHandler) refers to ht6xxx_timer.o(i.HT_TMR_ITFlagStatusGet) for HT_TMR_ITFlagStatusGet
+    ht6xxx_it.o(i.TIMER_4_IRQHandler) refers to ht6xxx_timer.o(i.HT_TMR_ClearITPendingBit) for HT_TMR_ClearITPendingBit
+    ht6xxx_it.o(i.TIMER_5_IRQHandler) refers to ht6xxx_timer.o(i.HT_TMR_ITFlagStatusGet) for HT_TMR_ITFlagStatusGet
+    ht6xxx_it.o(i.TIMER_5_IRQHandler) refers to ht6xxx_timer.o(i.HT_TMR_ClearITPendingBit) for HT_TMR_ClearITPendingBit
+    ht6xxx_it.o(i.UART0_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_UART_ITFlagStatusGet) for HT_UART_ITFlagStatusGet
+    ht6xxx_it.o(i.UART0_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_UART_ClearITPendingBit) for HT_UART_ClearITPendingBit
+    ht6xxx_it.o(i.UART1_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_UART_ITFlagStatusGet) for HT_UART_ITFlagStatusGet
+    ht6xxx_it.o(i.UART1_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_UART_ClearITPendingBit) for HT_UART_ClearITPendingBit
+    ht6xxx_it.o(i.UART2_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_UART_ITFlagStatusGet) for HT_UART_ITFlagStatusGet
+    ht6xxx_it.o(i.UART2_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_UART_ClearITPendingBit) for HT_UART_ClearITPendingBit
+    ht6xxx_it.o(i.UART3_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_UART_ITFlagStatusGet) for HT_UART_ITFlagStatusGet
+    ht6xxx_it.o(i.UART3_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_UART_ClearITPendingBit) for HT_UART_ClearITPendingBit
+    ht6xxx_it.o(i.UART3_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_ISO7816_ITFlagStatusGet) for HT_ISO7816_ITFlagStatusGet
+    ht6xxx_it.o(i.UART3_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_ISO7816_ClearITPendingBit) for HT_ISO7816_ClearITPendingBit
+    ht6xxx_it.o(i.UART4_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_UART_ITFlagStatusGet) for HT_UART_ITFlagStatusGet
+    ht6xxx_it.o(i.UART4_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_UART_ClearITPendingBit) for HT_UART_ClearITPendingBit
+    ht6xxx_it.o(i.UART4_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_ISO7816_ITFlagStatusGet) for HT_ISO7816_ITFlagStatusGet
+    ht6xxx_it.o(i.UART4_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_ISO7816_ClearITPendingBit) for HT_ISO7816_ClearITPendingBit
+    ht6xxx_it.o(i.UART5_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_UART_ITFlagStatusGet) for HT_UART_ITFlagStatusGet
+    ht6xxx_it.o(i.UART5_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_UART_ClearITPendingBit) for HT_UART_ClearITPendingBit
+    ht6xxx_it.o(i.UART6_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_UART_ITFlagStatusGet) for HT_UART_ITFlagStatusGet
+    ht6xxx_it.o(i.UART6_IRQHandler) refers to ht6xxx_uart&7816.o(i.HT_UART_ClearITPendingBit) for HT_UART_ClearITPendingBit
+    main.o(i.main) refers to ht6xxx_wdt.o(i.HT_FreeDog) for HT_FreeDog
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfltui.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixui.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    cdrcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_ht633x.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_ht633x.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing system_ht6xxx.o(.rev16_text), (4 bytes).
+    Removing system_ht6xxx.o(.revsh_text), (4 bytes).
+    Removing system_ht6xxx.o(.rrx_text), (6 bytes).
+    Removing startup_ht633x.o(HEAP), (0 bytes).
+    Removing ht6xxx_aes&rand.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_aes&rand.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_aes&rand.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_aes&rand.o(i.HT_AES_Busy_StatusGet), (12 bytes).
+    Removing ht6xxx_aes&rand.o(i.HT_AES_Decrypt), (236 bytes).
+    Removing ht6xxx_aes&rand.o(i.HT_AES_Encrypt), (236 bytes).
+    Removing ht6xxx_aes&rand.o(i.HT_AES_GHASH_RAND_ITConfig), (164 bytes).
+    Removing ht6xxx_aes&rand.o(i.HT_AES_Read), (32 bytes).
+    Removing ht6xxx_aes&rand.o(i.HT_AES_Xor128bits), (30 bytes).
+    Removing ht6xxx_aes&rand.o(i.HT_GHASH_Busy_StatusGet), (12 bytes).
+    Removing ht6xxx_aes&rand.o(i.HT_GHASH_Multiply), (92 bytes).
+    Removing ht6xxx_aes&rand.o(i.HT_GHASH_Multiply_Read), (40 bytes).
+    Removing ht6xxx_aes&rand.o(i.HT_RAND_BackMode_Config), (132 bytes).
+    Removing ht6xxx_aes&rand.o(i.HT_RAND_DataGet), (28 bytes).
+    Removing ht6xxx_aes&rand.o(i.HT_RAND_WorkState), (148 bytes).
+    Removing ht6xxx_cmu.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_cmu.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_cmu.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_cmu.o(i.HT_CMU_CPUClkGet), (204 bytes).
+    Removing ht6xxx_cmu.o(i.HT_CMU_CPllSet), (128 bytes).
+    Removing ht6xxx_cmu.o(i.HT_CMU_CTRL_2T_Set), (64 bytes).
+    Removing ht6xxx_cmu.o(i.HT_CMU_Cache_Set), (64 bytes).
+    Removing ht6xxx_cmu.o(i.HT_CMU_ChipIDGet), (16 bytes).
+    Removing ht6xxx_cmu.o(i.HT_CMU_ClkCtrl0Config), (180 bytes).
+    Removing ht6xxx_cmu.o(i.HT_CMU_ClkCtrl1Config), (68 bytes).
+    Removing ht6xxx_cmu.o(i.HT_CMU_ClkoutSet), (172 bytes).
+    Removing ht6xxx_cmu.o(i.HT_CMU_FLASH_LATENCY_Set), (176 bytes).
+    Removing ht6xxx_cmu.o(i.HT_CMU_HRCCLK_Set), (288 bytes).
+    Removing ht6xxx_cmu.o(i.HT_CMU_Init), (460 bytes).
+    Removing ht6xxx_cmu.o(i.HT_CMU_JTAGStatusGet), (16 bytes).
+    Removing ht6xxx_cmu.o(i.HT_CMU_SysClkGet), (192 bytes).
+    Removing ht6xxx_cmu.o(i.WaitPllLock), (36 bytes).
+    Removing ht6xxx_cmu.o(.constdata), (8 bytes).
+    Removing ht6xxx_crc.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_crc.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_crc.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_crc.o(i.HT_CRC_DataCalc), (236 bytes).
+    Removing ht6xxx_crc.o(i.HT_CRC_ModeSelect), (380 bytes).
+    Removing ht6xxx_crc.o(.data), (1 bytes).
+    Removing ht6xxx_dma.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_dma.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_dma.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_dma.o(i.HT_DMA_Cmd), (168 bytes).
+    Removing ht6xxx_dma.o(i.HT_DMA_ITConfig), (248 bytes).
+    Removing ht6xxx_dma.o(i.HT_DMA_Init), (420 bytes).
+    Removing ht6xxx_ecc.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_ecc.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_ecc.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_ecc.o(i.HT_ECC_Busy_StatusGet), (16 bytes).
+    Removing ht6xxx_ecc.o(i.HT_ECC_ECDSA_Init), (104 bytes).
+    Removing ht6xxx_ecc.o(i.HT_ECC_ECDSA_S), (100 bytes).
+    Removing ht6xxx_ecc.o(i.HT_ECC_ECDSA_S_Read), (44 bytes).
+    Removing ht6xxx_ecc.o(i.HT_ECC_ECDSA_V), (128 bytes).
+    Removing ht6xxx_ecc.o(i.HT_ECC_ITConfig), (116 bytes).
+    Removing ht6xxx_ecc.o(i.HT_ECC_ModOperate), (172 bytes).
+    Removing ht6xxx_ecc.o(i.HT_ECC_ModOperate_Read), (32 bytes).
+    Removing ht6xxx_ecc.o(i.HT_ECC_PointOperate), (188 bytes).
+    Removing ht6xxx_ecc.o(i.HT_ECC_PointOperate_Init), (48 bytes).
+    Removing ht6xxx_ecc.o(i.HT_ECC_PointOperate_Read), (48 bytes).
+    Removing ht6xxx_ecc.o(i.HT_ECC_PublickeyValidate), (128 bytes).
+    Removing ht6xxx_exti.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_exti.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_exti.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_exti.o(i.HT_EXTIFall_ITConfig), (260 bytes).
+    Removing ht6xxx_exti.o(i.HT_EXTIRise_ITConfig), (272 bytes).
+    Removing ht6xxx_exti.o(i.HT_EXTI_FilterConfig), (264 bytes).
+    Removing ht6xxx_flash.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_flash.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_flash.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_flash.o(.emb_text), (632 bytes).
+    Removing ht6xxx_flash.o(i.HT_Flash_ByteRead), (208 bytes).
+    Removing ht6xxx_flash.o(i.HT_Flash_ChipErase), (72 bytes).
+    Removing ht6xxx_flash.o(i.HT_Flash_EWR_Pro), (612 bytes).
+    Removing ht6xxx_flash.o(i.HT_Flash_HalfWordRead), (224 bytes).
+    Removing ht6xxx_flash.o(i.HT_Flash_PageEraseWithSectionUnlock), (436 bytes).
+    Removing ht6xxx_flash.o(i.HT_Flash_WordRead), (224 bytes).
+    Removing ht6xxx_flash.o(i.HT_Info_ByteRead), (240 bytes).
+    Removing ht6xxx_flash.o(i.HT_Info_EWR_Pro), (660 bytes).
+    Removing ht6xxx_flash.o(i.HT_Info_HalfWordRead), (256 bytes).
+    Removing ht6xxx_flash.o(i.HT_Info_WordRead), (256 bytes).
+    Removing ht6xxx_flash.o(.constdata), (8 bytes).
+    Removing ht6xxx_gpio.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_gpio.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_gpio.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_gpio.o(i.HT_GPIO_AFInit), (332 bytes).
+    Removing ht6xxx_gpio.o(i.HT_GPIO_BitsRead), (156 bytes).
+    Removing ht6xxx_gpio.o(i.HT_GPIO_BitsReset), (152 bytes).
+    Removing ht6xxx_gpio.o(i.HT_GPIO_BitsSet), (152 bytes).
+    Removing ht6xxx_gpio.o(i.HT_GPIO_BitsToggle), (152 bytes).
+    Removing ht6xxx_gpio.o(i.HT_GPIO_DirectionSet), (188 bytes).
+    Removing ht6xxx_gpio.o(i.HT_GPIO_HighCurrentSet), (132 bytes).
+    Removing ht6xxx_gpio.o(i.HT_GPIO_High_Resistance_Set), (188 bytes).
+    Removing ht6xxx_gpio.o(i.HT_GPIO_Init), (496 bytes).
+    Removing ht6xxx_gpio.o(i.HT_GPIO_InputFilter), (188 bytes).
+    Removing ht6xxx_gpio.o(i.HT_GPIO_InputStatusSet), (188 bytes).
+    Removing ht6xxx_gpio.o(i.HT_GPIO_OutputStatusSet), (188 bytes).
+    Removing ht6xxx_iic.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_iic.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_iic.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_iic.o(i.HT_I2C_ClearITPendingBit), (20 bytes).
+    Removing ht6xxx_iic.o(i.HT_I2C_ITFlagStatusGet), (24 bytes).
+    Removing ht6xxx_iic.o(i.HT_I2C_Init), (220 bytes).
+    Removing ht6xxx_iic.o(i.HT_I2C_Master_Receive), (148 bytes).
+    Removing ht6xxx_iic.o(i.HT_I2C_Master_Receive_IT), (20 bytes).
+    Removing ht6xxx_iic.o(i.HT_I2C_Master_Transmit), (148 bytes).
+    Removing ht6xxx_iic.o(i.HT_I2C_Master_Transmit_IT), (84 bytes).
+    Removing ht6xxx_iic.o(i.HT_I2C_Slave_Receive), (92 bytes).
+    Removing ht6xxx_iic.o(i.HT_I2C_Slave_Receive_IT), (2 bytes).
+    Removing ht6xxx_iic.o(i.HT_I2C_Slave_Transmit), (92 bytes).
+    Removing ht6xxx_iic.o(i.HT_I2C_Slave_Transmit_IT), (2 bytes).
+    Removing ht6xxx_iic.o(i.HT_I2C_Start), (20 bytes).
+    Removing ht6xxx_iic.o(i.HT_I2C_Stop), (2 bytes).
+    Removing ht6xxx_iic.o(i.__NVIC_EnableIRQ), (36 bytes).
+    Removing ht6xxx_iic.o(.data), (16 bytes).
+    Removing ht6xxx_lcd.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_lcd.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_lcd.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_lcd.o(i.HT_LCD_Init), (184 bytes).
+    Removing ht6xxx_lcd.o(i.HT_LCD_Read), (24 bytes).
+    Removing ht6xxx_lcd.o(i.HT_LCD_Write), (16 bytes).
+    Removing ht6xxx_pmu.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_pmu.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_pmu.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_pmu.o(i.HT_LDO_LP_VoltConfig), (132 bytes).
+    Removing ht6xxx_pmu.o(i.HT_LPRUN_StatusGet), (24 bytes).
+    Removing ht6xxx_pmu.o(i.HT_PMUState_FlagStatusGet), (108 bytes).
+    Removing ht6xxx_pmu.o(i.HT_PMU_FlashDPDConfig), (36 bytes).
+    Removing ht6xxx_pmu.o(i.HT_PMU_HoldLDOConfig), (68 bytes).
+    Removing ht6xxx_pmu.o(i.HT_PMU_HoldSram0Config), (36 bytes).
+    Removing ht6xxx_pmu.o(i.HT_PMU_HoldSram1Config), (36 bytes).
+    Removing ht6xxx_pmu.o(i.HT_PMU_HoldSram2Config), (36 bytes).
+    Removing ht6xxx_pmu.o(i.HT_PMU_HoldVrefConfig), (36 bytes).
+    Removing ht6xxx_pmu.o(i.HT_PMU_ITConfig), (120 bytes).
+    Removing ht6xxx_pmu.o(i.HT_PMU_Init), (228 bytes).
+    Removing ht6xxx_pmu.o(i.HT_PMU_LPRunConfig), (68 bytes).
+    Removing ht6xxx_pmu.o(i.HT_PMU_LowpowerVref_TcConfig), (136 bytes).
+    Removing ht6xxx_pmu.o(i.HT_PMU_LowpowerVref_TvConfig), (136 bytes).
+    Removing ht6xxx_pmu.o(i.HT_PMU_NormalVref_TrimConfig), (136 bytes).
+    Removing ht6xxx_pmu.o(.constdata), (8 bytes).
+    Removing ht6xxx_reset.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_reset.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_reset.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_reset.o(i.HT_EnterHold), (16 bytes).
+    Removing ht6xxx_reset.o(i.HT_EnterSleep), (16 bytes).
+    Removing ht6xxx_reset.o(i.HT_ResetFlagClear), (16 bytes).
+    Removing ht6xxx_reset.o(i.HT_ResetFlagStatusGet), (24 bytes).
+    Removing ht6xxx_reset.o(i.HT_WakeFlagStatusGet), (24 bytes).
+    Removing ht6xxx_rtc.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_rtc.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_rtc.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTCSTAMP_ClearITPendingBit), (140 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTCSTAMP_GetEventCount), (92 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTCSTAMP_GetTriggerSource), (300 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTCSTAMP_ITConfig), (176 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTCSTAMP_ITFlagStatusGet), (136 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTC_AlarmSet), (24 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTC_ClearITPendingBit), (128 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTC_ITConfig), (168 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTC_ITFlagStatusGet), (140 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTC_Init), (468 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTC_LoadInfoData), (448 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTC_RTCBACKUP_Read), (224 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTC_RTCBACKUP_Write), (220 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTC_RTCCLK_CFG), (136 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTC_Read), (100 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTC_TMRConfig), (136 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTC_ToutSet), (144 bytes).
+    Removing ht6xxx_rtc.o(i.HT_RTC_Write), (296 bytes).
+    Removing ht6xxx_rtc.o(.constdata), (8 bytes).
+    Removing ht6xxx_spi.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_spi.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_spi.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_spi.o(i.HT_SPI_CSHigh), (136 bytes).
+    Removing ht6xxx_spi.o(i.HT_SPI_CSLow), (136 bytes).
+    Removing ht6xxx_spi.o(i.HT_SPI_Init), (384 bytes).
+    Removing ht6xxx_spi.o(i.HT_SPI_SendByte), (164 bytes).
+    Removing ht6xxx_tbs.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_tbs.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_tbs.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_tbs.o(i.HT_TBSConfig), (204 bytes).
+    Removing ht6xxx_tbs.o(i.HT_TBS_ADCInjectConfig), (36 bytes).
+    Removing ht6xxx_tbs.o(i.HT_TBS_ADCInjectSample), (156 bytes).
+    Removing ht6xxx_tbs.o(i.HT_TBS_ADCTriSample), (164 bytes).
+    Removing ht6xxx_tbs.o(i.HT_TBS_CMPThresholdSet), (104 bytes).
+    Removing ht6xxx_tbs.o(i.HT_TBS_CMUClkConfig), (172 bytes).
+    Removing ht6xxx_tbs.o(i.HT_TBS_ClkSelConfig), (412 bytes).
+    Removing ht6xxx_tbs.o(i.HT_TBS_FilCntConfig), (128 bytes).
+    Removing ht6xxx_tbs.o(i.HT_TBS_ITConfig), (184 bytes).
+    Removing ht6xxx_tbs.o(i.HT_TBS_PeriodSet), (428 bytes).
+    Removing ht6xxx_tbs.o(i.HT_TBS_TBSReset), (36 bytes).
+    Removing ht6xxx_tbs.o(i.HT_TBS_ValueRead), (256 bytes).
+    Removing ht6xxx_timer.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_timer.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_timer.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_timer.o(i.HT_TMRExt_Init), (824 bytes).
+    Removing ht6xxx_timer.o(i.HT_TMR_CaptureGet), (140 bytes).
+    Removing ht6xxx_timer.o(i.HT_TMR_Cmd), (176 bytes).
+    Removing ht6xxx_timer.o(i.HT_TMR_CompareSet), (140 bytes).
+    Removing ht6xxx_timer.o(i.HT_TMR_CountGet), (140 bytes).
+    Removing ht6xxx_timer.o(i.HT_TMR_CounterSet), (140 bytes).
+    Removing ht6xxx_timer.o(i.HT_TMR_ITConfig), (216 bytes).
+    Removing ht6xxx_timer.o(i.HT_TMR_Init), (600 bytes).
+    Removing ht6xxx_timer.o(i.HT_TMR_PeriodSet), (144 bytes).
+    Removing ht6xxx_timer.o(i.HT_TMR_PrescalerSet), (140 bytes).
+    Removing ht6xxx_uart&7816.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_uart&7816.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_uart&7816.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_uart&7816.o(i.HT_IR_Init), (236 bytes).
+    Removing ht6xxx_uart&7816.o(i.HT_ISO7816_ITConfig), (148 bytes).
+    Removing ht6xxx_uart&7816.o(i.HT_ISO7816_Init), (276 bytes).
+    Removing ht6xxx_uart&7816.o(i.HT_ISO7816_ReceiveData), (104 bytes).
+    Removing ht6xxx_uart&7816.o(i.HT_ISO7816_SendData), (108 bytes).
+    Removing ht6xxx_uart&7816.o(i.HT_UART_ITConfig), (200 bytes).
+    Removing ht6xxx_uart&7816.o(i.HT_UART_Init), (452 bytes).
+    Removing ht6xxx_uart&7816.o(i.HT_UART_RXFilterConfig), (148 bytes).
+    Removing ht6xxx_uart&7816.o(i.HT_UART_ReceiveData), (152 bytes).
+    Removing ht6xxx_uart&7816.o(i.HT_UART_SendData), (152 bytes).
+    Removing ht6x3x_emu.o(.rev16_text), (4 bytes).
+    Removing ht6x3x_emu.o(.revsh_text), (4 bytes).
+    Removing ht6x3x_emu.o(.rrx_text), (6 bytes).
+    Removing ht6x3x_emu.o(i.HT_EMU_Const_Init), (232 bytes).
+    Removing ht6x3x_emu.o(i.HT_EMU_EMUCLK_Config), (204 bytes).
+    Removing ht6x3x_emu.o(i.HT_EMU_RegisterRead), (196 bytes).
+    Removing ht6x3x_emu.o(i.HT_EMU_RegisterWrite), (172 bytes).
+    Removing ht6x3x_emu.o(.constdata), (8 bytes).
+    Removing ht6xxx_wdt.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_wdt.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_wdt.o(.rrx_text), (6 bytes).
+    Removing ht6xxx_wdt.o(i.HT_FreeDog_WithPara), (392 bytes).
+    Removing ht6xxx_wdt.o(i.HT_SHModeDogConfigure), (6 bytes).
+    Removing ht6xxx_wdt.o(i.HT_WDT_Init), (38 bytes).
+    Removing ht6xxx_it.o(.rev16_text), (4 bytes).
+    Removing ht6xxx_it.o(.revsh_text), (4 bytes).
+    Removing ht6xxx_it.o(.rrx_text), (6 bytes).
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.rrx_text), (6 bytes).
+    Removing dadd.o(.text), (334 bytes).
+    Removing dmul.o(.text), (228 bytes).
+    Removing ddiv.o(.text), (222 bytes).
+    Removing dfltui.o(.text), (26 bytes).
+    Removing dfixui.o(.text), (50 bytes).
+    Removing cdrcmple.o(.text), (40 bytes).
+    Removing depilogue.o(.text), (190 bytes).
+
+248 unused section(s) (total 29403 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      208  startup_ht633x.o(RESET)
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ..\..\Libraries\CMSIS\DeviceSupport\src\system_ht6xxx.c 0x00000000   Number         0  system_ht6xxx.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6x3x_emu.c 0x00000000   Number         0  ht6x3x_emu.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_aes&rand.c 0x00000000   Number         0  ht6xxx_aes&rand.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_cmu.c 0x00000000   Number         0  ht6xxx_cmu.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_crc.c 0x00000000   Number         0  ht6xxx_crc.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_dma.c 0x00000000   Number         0  ht6xxx_dma.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_ecc.c 0x00000000   Number         0  ht6xxx_ecc.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_exti.c 0x00000000   Number         0  ht6xxx_exti.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_flash.c 0x00000000   Number         0  ht6xxx_flash.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_gpio.c 0x00000000   Number         0  ht6xxx_gpio.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_iic.c 0x00000000   Number         0  ht6xxx_iic.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_lcd.c 0x00000000   Number         0  ht6xxx_lcd.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_pmu.c 0x00000000   Number         0  ht6xxx_pmu.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_reset.c 0x00000000   Number         0  ht6xxx_reset.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_rtc.c 0x00000000   Number         0  ht6xxx_rtc.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_spi.c 0x00000000   Number         0  ht6xxx_spi.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_tbs.c 0x00000000   Number         0  ht6xxx_tbs.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_timer.c 0x00000000   Number         0  ht6xxx_timer.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_uart&7816.c 0x00000000   Number         0  ht6xxx_uart&7816.o ABSOLUTE
+    ..\..\Libraries\HT60xx_StdPeriph_Driver\src\ht6xxx_wdt.c 0x00000000   Number         0  ht6xxx_wdt.o ABSOLUTE
+    ..\..\Libraries\Startup\Keil\startup_ht633x.s 0x00000000   Number         0  startup_ht633x.o ABSOLUTE
+    ..\..\Users\src\ht6xxx_it.c              0x00000000   Number         0  ht6xxx_it.o ABSOLUTE
+    ..\..\Users\src\main.c                   0x00000000   Number         0  main.o ABSOLUTE
+    ..\\..\\Libraries\\CMSIS\\DeviceSupport\\src\\system_ht6xxx.c 0x00000000   Number         0  system_ht6xxx.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6x3x_emu.c 0x00000000   Number         0  ht6x3x_emu.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_aes&rand.c 0x00000000   Number         0  ht6xxx_aes&rand.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_cmu.c 0x00000000   Number         0  ht6xxx_cmu.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_crc.c 0x00000000   Number         0  ht6xxx_crc.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_dma.c 0x00000000   Number         0  ht6xxx_dma.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_ecc.c 0x00000000   Number         0  ht6xxx_ecc.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_exti.c 0x00000000   Number         0  ht6xxx_exti.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_flash.c 0x00000000   Number         0  ht6xxx_flash.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_gpio.c 0x00000000   Number         0  ht6xxx_gpio.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_iic.c 0x00000000   Number         0  ht6xxx_iic.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_lcd.c 0x00000000   Number         0  ht6xxx_lcd.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_pmu.c 0x00000000   Number         0  ht6xxx_pmu.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_reset.c 0x00000000   Number         0  ht6xxx_reset.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_rtc.c 0x00000000   Number         0  ht6xxx_rtc.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_spi.c 0x00000000   Number         0  ht6xxx_spi.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_tbs.c 0x00000000   Number         0  ht6xxx_tbs.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_timer.c 0x00000000   Number         0  ht6xxx_timer.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_uart&7816.c 0x00000000   Number         0  ht6xxx_uart&7816.o ABSOLUTE
+    ..\\..\\Libraries\\HT60xx_StdPeriph_Driver\\src\\ht6xxx_wdt.c 0x00000000   Number         0  ht6xxx_wdt.o ABSOLUTE
+    ..\\..\\Users\\src\\ht6xxx_it.c          0x00000000   Number         0  ht6xxx_it.o ABSOLUTE
+    ..\\..\\Users\\src\\main.c               0x00000000   Number         0  main.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x000000d0   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000d0   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000000d4   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000000d8   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000000d8   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000000d8   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x000000e0   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000000e0   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000000e0   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x000000e0   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x000000e4   Section       28  startup_ht633x.o(.text)
+    .text                                    0x00000100   Section       36  init.o(.text)
+    i.AES_IRQHandler                         0x00000124   Section        0  ht6xxx_it.o(i.AES_IRQHandler)
+    i.DMA_IRQHandler                         0x00000164   Section        0  ht6xxx_it.o(i.DMA_IRQHandler)
+    i.DMA_IRQProc                            0x0000016c   Section        0  ht6xxx_it.o(i.DMA_IRQProc)
+    DMA_IRQProc                              0x0000016d   Thumb Code   422  ht6xxx_it.o(i.DMA_IRQProc)
+    i.EXTI0_IRQHandler                       0x00000312   Section        0  ht6xxx_it.o(i.EXTI0_IRQHandler)
+    i.EXTI10_14_IRQHandler                   0x00000336   Section        0  ht6xxx_it.o(i.EXTI10_14_IRQHandler)
+    i.EXTI1_IRQHandler                       0x000003ee   Section        0  ht6xxx_it.o(i.EXTI1_IRQHandler)
+    i.EXTI2_IRQHandler                       0x00000414   Section        0  ht6xxx_it.o(i.EXTI2_IRQHandler)
+    i.EXTI3_IRQHandler                       0x0000043a   Section        0  ht6xxx_it.o(i.EXTI3_IRQHandler)
+    i.EXTI4_IRQHandler                       0x00000460   Section        0  ht6xxx_it.o(i.EXTI4_IRQHandler)
+    i.EXTI5_IRQHandler                       0x00000486   Section        0  ht6xxx_it.o(i.EXTI5_IRQHandler)
+    i.EXTI6_IRQHandler                       0x000004ac   Section        0  ht6xxx_it.o(i.EXTI6_IRQHandler)
+    i.EXTI7_9_IRQHandler                     0x000004d2   Section        0  ht6xxx_it.o(i.EXTI7_9_IRQHandler)
+    i.HT_AES_GHASH_RAND_ClearITPendingBit    0x00000544   Section        0  ht6xxx_aes&rand.o(i.HT_AES_GHASH_RAND_ClearITPendingBit)
+    i.HT_AES_GHASH_RAND_ITFlagStatusGet      0x000005b4   Section        0  ht6xxx_aes&rand.o(i.HT_AES_GHASH_RAND_ITFlagStatusGet)
+    i.HT_CMU_StopFlagGet                     0x00000630   Section        0  ht6xxx_cmu.o(i.HT_CMU_StopFlagGet)
+    i.HT_DMA_ClearITPendingBit               0x000006a0   Section        0  ht6xxx_dma.o(i.HT_DMA_ClearITPendingBit)
+    i.HT_DMA_ITFlagStatusGet                 0x00000784   Section        0  ht6xxx_dma.o(i.HT_DMA_ITFlagStatusGet)
+    i.HT_ECC_ClearITPendingBit               0x00000874   Section        0  ht6xxx_ecc.o(i.HT_ECC_ClearITPendingBit)
+    i.HT_ECC_ITFlagStatusGet                 0x000008e4   Section        0  ht6xxx_ecc.o(i.HT_ECC_ITFlagStatusGet)
+    i.HT_EXTIFall_ClearITPendingBit          0x00000958   Section        0  ht6xxx_exti.o(i.HT_EXTIFall_ClearITPendingBit)
+    i.HT_EXTIFall_ITFlagStatusGet            0x00000a24   Section        0  ht6xxx_exti.o(i.HT_EXTIFall_ITFlagStatusGet)
+    i.HT_EXTIRise_ClearITPendingBit          0x00000af8   Section        0  ht6xxx_exti.o(i.HT_EXTIRise_ClearITPendingBit)
+    i.HT_EXTIRise_ITFlagStatusGet            0x00000bd4   Section        0  ht6xxx_exti.o(i.HT_EXTIRise_ITFlagStatusGet)
+    i.HT_FreeDog                             0x00000cb4   Section        0  ht6xxx_wdt.o(i.HT_FreeDog)
+    i.HT_I2C_IRQHandler_Default              0x00000cc4   Section        0  ht6xxx_iic.o(i.HT_I2C_IRQHandler_Default)
+    i.HT_ISO7816_ClearITPendingBit           0x00000cc8   Section        0  ht6xxx_uart&7816.o(i.HT_ISO7816_ClearITPendingBit)
+    i.HT_ISO7816_ITFlagStatusGet             0x00000d48   Section        0  ht6xxx_uart&7816.o(i.HT_ISO7816_ITFlagStatusGet)
+    i.HT_PMU_ClearITPendingBit               0x00000dd4   Section        0  ht6xxx_pmu.o(i.HT_PMU_ClearITPendingBit)
+    i.HT_PMU_ITFlagStatusGet                 0x00000e34   Section        0  ht6xxx_pmu.o(i.HT_PMU_ITFlagStatusGet)
+    i.HT_SPI_ClearITPendingBit               0x00000ea0   Section        0  ht6xxx_spi.o(i.HT_SPI_ClearITPendingBit)
+    i.HardFault_Handler                      0x00000f40   Section        0  ht6xxx_it.o(i.HardFault_Handler)
+    i.I2C_IRQHandler                         0x00000f44   Section        0  ht6xxx_it.o(i.I2C_IRQHandler)
+    i.NMI_Handler                            0x00000f4c   Section        0  ht6xxx_it.o(i.NMI_Handler)
+    i.PMU_IRQHandler                         0x00000f62   Section        0  ht6xxx_it.o(i.PMU_IRQHandler)
+    i.PendSV_Handler                         0x00000fb4   Section        0  ht6xxx_it.o(i.PendSV_Handler)
+    i.SVC_Handler                            0x00000fb6   Section        0  ht6xxx_it.o(i.SVC_Handler)
+    i.SelfTestFreq_IRQHandler                0x00000fb8   Section        0  ht6xxx_it.o(i.SelfTestFreq_IRQHandler)
+    i.SysTick_Handler                        0x00000fba   Section        0  ht6xxx_it.o(i.SysTick_Handler)
+    i.SystemInit                             0x00000fbc   Section        0  system_ht6xxx.o(i.SystemInit)
+    i.__scatterload_null                     0x00000fbe   Section        2  handlers.o(i.__scatterload_null)
+    .ARM.__at_0x0FC0                         0x00000fc0   Section        4  startup_ht633x.o(.ARM.__at_0x0FC0)
+    i.HT_SPI_ITFlagStatusGet                 0x00000fc4   Section        0  ht6xxx_spi.o(i.HT_SPI_ITFlagStatusGet)
+    i.HT_TBS_ClearITPendingBit               0x0000106c   Section        0  ht6xxx_tbs.o(i.HT_TBS_ClearITPendingBit)
+    i.HT_TBS_ITFlagStatusGet                 0x00001110   Section        0  ht6xxx_tbs.o(i.HT_TBS_ITFlagStatusGet)
+    i.HT_TMR_ClearITPendingBit               0x000011c0   Section        0  ht6xxx_timer.o(i.HT_TMR_ClearITPendingBit)
+    i.HT_TMR_ITFlagStatusGet                 0x00001274   Section        0  ht6xxx_timer.o(i.HT_TMR_ITFlagStatusGet)
+    i.HT_UART_ClearITPendingBit              0x0000133c   Section        0  ht6xxx_uart&7816.o(i.HT_UART_ClearITPendingBit)
+    i.HT_UART_ITFlagStatusGet                0x000013e8   Section        0  ht6xxx_uart&7816.o(i.HT_UART_ITFlagStatusGet)
+    i.RTC_IRQHandler                         0x000014a0   Section        0  ht6xxx_it.o(i.RTC_IRQHandler)
+    i.SPI0_IRQHandler                        0x000014c4   Section        0  ht6xxx_it.o(i.SPI0_IRQHandler)
+    i.SPI1_IRQHandler                        0x000014f4   Section        0  ht6xxx_it.o(i.SPI1_IRQHandler)
+    i.SPI2_IRQHandler                        0x00001524   Section        0  ht6xxx_it.o(i.SPI2_IRQHandler)
+    i.SPI3_IRQHandler                        0x00001554   Section        0  ht6xxx_it.o(i.SPI3_IRQHandler)
+    i.TBS_IRQHandler                         0x00001584   Section        0  ht6xxx_it.o(i.TBS_IRQHandler)
+    i.TIMER_0_IRQHandler                     0x00001674   Section        0  ht6xxx_it.o(i.TIMER_0_IRQHandler)
+    i.TIMER_1_IRQHandler                     0x000016d8   Section        0  ht6xxx_it.o(i.TIMER_1_IRQHandler)
+    i.TIMER_2_IRQHandler                     0x0000173c   Section        0  ht6xxx_it.o(i.TIMER_2_IRQHandler)
+    i.TIMER_3_IRQHandler                     0x000017a0   Section        0  ht6xxx_it.o(i.TIMER_3_IRQHandler)
+    i.TIMER_4_IRQHandler                     0x00001814   Section        0  ht6xxx_it.o(i.TIMER_4_IRQHandler)
+    i.TIMER_5_IRQHandler                     0x0000188c   Section        0  ht6xxx_it.o(i.TIMER_5_IRQHandler)
+    i.UART0_IRQHandler                       0x00001904   Section        0  ht6xxx_it.o(i.UART0_IRQHandler)
+    i.UART1_IRQHandler                       0x00001934   Section        0  ht6xxx_it.o(i.UART1_IRQHandler)
+    i.UART2_IRQHandler                       0x00001964   Section        0  ht6xxx_it.o(i.UART2_IRQHandler)
+    i.UART3_IRQHandler                       0x00001994   Section        0  ht6xxx_it.o(i.UART3_IRQHandler)
+    i.UART4_IRQHandler                       0x00001a00   Section        0  ht6xxx_it.o(i.UART4_IRQHandler)
+    i.UART5_IRQHandler                       0x00001a6c   Section        0  ht6xxx_it.o(i.UART5_IRQHandler)
+    i.UART6_IRQHandler                       0x00001a98   Section        0  ht6xxx_it.o(i.UART6_IRQHandler)
+    i.__scatterload_copy                     0x00001ac8   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_zeroinit                 0x00001ad6   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.assert_failed                          0x00001ae4   Section        0  main.o(i.assert_failed)
+    i.main                                   0x00001ae8   Section        0  main.o(i.main)
+    STACK                                    0x20000000   Section    16384  startup_ht633x.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$MICROLIB$REQ8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_ht633x.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __main                                   0x000000d1   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000d1   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000000d5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000000d9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000000d9   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000000d9   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000000d9   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x000000e1   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000000e1   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x000000e5   Thumb Code     8  startup_ht633x.o(.text)
+    LPUART_IRQHandler                        0x000000f7   Thumb Code     0  startup_ht633x.o(.text)
+    Reserved_IRQHandler                      0x000000f7   Thumb Code     0  startup_ht633x.o(.text)
+    __scatterload                            0x00000101   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00000101   Thumb Code     0  init.o(.text)
+    AES_IRQHandler                           0x00000125   Thumb Code    64  ht6xxx_it.o(i.AES_IRQHandler)
+    DMA_IRQHandler                           0x00000165   Thumb Code     8  ht6xxx_it.o(i.DMA_IRQHandler)
+    EXTI0_IRQHandler                         0x00000313   Thumb Code    36  ht6xxx_it.o(i.EXTI0_IRQHandler)
+    EXTI10_14_IRQHandler                     0x00000337   Thumb Code   184  ht6xxx_it.o(i.EXTI10_14_IRQHandler)
+    EXTI1_IRQHandler                         0x000003ef   Thumb Code    38  ht6xxx_it.o(i.EXTI1_IRQHandler)
+    EXTI2_IRQHandler                         0x00000415   Thumb Code    38  ht6xxx_it.o(i.EXTI2_IRQHandler)
+    EXTI3_IRQHandler                         0x0000043b   Thumb Code    38  ht6xxx_it.o(i.EXTI3_IRQHandler)
+    EXTI4_IRQHandler                         0x00000461   Thumb Code    38  ht6xxx_it.o(i.EXTI4_IRQHandler)
+    EXTI5_IRQHandler                         0x00000487   Thumb Code    38  ht6xxx_it.o(i.EXTI5_IRQHandler)
+    EXTI6_IRQHandler                         0x000004ad   Thumb Code    38  ht6xxx_it.o(i.EXTI6_IRQHandler)
+    EXTI7_9_IRQHandler                       0x000004d3   Thumb Code   112  ht6xxx_it.o(i.EXTI7_9_IRQHandler)
+    HT_AES_GHASH_RAND_ClearITPendingBit      0x00000545   Thumb Code    44  ht6xxx_aes&rand.o(i.HT_AES_GHASH_RAND_ClearITPendingBit)
+    HT_AES_GHASH_RAND_ITFlagStatusGet        0x000005b5   Thumb Code    56  ht6xxx_aes&rand.o(i.HT_AES_GHASH_RAND_ITFlagStatusGet)
+    HT_CMU_StopFlagGet                       0x00000631   Thumb Code    46  ht6xxx_cmu.o(i.HT_CMU_StopFlagGet)
+    HT_DMA_ClearITPendingBit                 0x000006a1   Thumb Code   164  ht6xxx_dma.o(i.HT_DMA_ClearITPendingBit)
+    HT_DMA_ITFlagStatusGet                   0x00000785   Thumb Code   174  ht6xxx_dma.o(i.HT_DMA_ITFlagStatusGet)
+    HT_ECC_ClearITPendingBit                 0x00000875   Thumb Code    48  ht6xxx_ecc.o(i.HT_ECC_ClearITPendingBit)
+    HT_ECC_ITFlagStatusGet                   0x000008e5   Thumb Code    52  ht6xxx_ecc.o(i.HT_ECC_ITFlagStatusGet)
+    HT_EXTIFall_ClearITPendingBit            0x00000959   Thumb Code   140  ht6xxx_exti.o(i.HT_EXTIFall_ClearITPendingBit)
+    HT_EXTIFall_ITFlagStatusGet              0x00000a25   Thumb Code   148  ht6xxx_exti.o(i.HT_EXTIFall_ITFlagStatusGet)
+    HT_EXTIRise_ClearITPendingBit            0x00000af9   Thumb Code   154  ht6xxx_exti.o(i.HT_EXTIRise_ClearITPendingBit)
+    HT_EXTIRise_ITFlagStatusGet              0x00000bd5   Thumb Code   160  ht6xxx_exti.o(i.HT_EXTIRise_ITFlagStatusGet)
+    HT_FreeDog                               0x00000cb5   Thumb Code    10  ht6xxx_wdt.o(i.HT_FreeDog)
+    HT_I2C_IRQHandler_Default                0x00000cc5   Thumb Code     2  ht6xxx_iic.o(i.HT_I2C_IRQHandler_Default)
+    HT_ISO7816_ClearITPendingBit             0x00000cc9   Thumb Code    54  ht6xxx_uart&7816.o(i.HT_ISO7816_ClearITPendingBit)
+    HT_ISO7816_ITFlagStatusGet               0x00000d49   Thumb Code    66  ht6xxx_uart&7816.o(i.HT_ISO7816_ITFlagStatusGet)
+    HT_PMU_ClearITPendingBit                 0x00000dd5   Thumb Code    32  ht6xxx_pmu.o(i.HT_PMU_ClearITPendingBit)
+    HT_PMU_ITFlagStatusGet                   0x00000e35   Thumb Code    44  ht6xxx_pmu.o(i.HT_PMU_ITFlagStatusGet)
+    HT_SPI_ClearITPendingBit                 0x00000ea1   Thumb Code    84  ht6xxx_spi.o(i.HT_SPI_ClearITPendingBit)
+    HardFault_Handler                        0x00000f41   Thumb Code     4  ht6xxx_it.o(i.HardFault_Handler)
+    I2C_IRQHandler                           0x00000f45   Thumb Code     8  ht6xxx_it.o(i.I2C_IRQHandler)
+    NMI_Handler                              0x00000f4d   Thumb Code    22  ht6xxx_it.o(i.NMI_Handler)
+    PMU_IRQHandler                           0x00000f63   Thumb Code    82  ht6xxx_it.o(i.PMU_IRQHandler)
+    PendSV_Handler                           0x00000fb5   Thumb Code     2  ht6xxx_it.o(i.PendSV_Handler)
+    SVC_Handler                              0x00000fb7   Thumb Code     2  ht6xxx_it.o(i.SVC_Handler)
+    SelfTestFreq_IRQHandler                  0x00000fb9   Thumb Code     2  ht6xxx_it.o(i.SelfTestFreq_IRQHandler)
+    SysTick_Handler                          0x00000fbb   Thumb Code     2  ht6xxx_it.o(i.SysTick_Handler)
+    SystemInit                               0x00000fbd   Thumb Code     2  system_ht6xxx.o(i.SystemInit)
+    __scatterload_null                       0x00000fbf   Thumb Code     2  handlers.o(i.__scatterload_null)
+    HT_SPI_ITFlagStatusGet                   0x00000fc5   Thumb Code    90  ht6xxx_spi.o(i.HT_SPI_ITFlagStatusGet)
+    HT_TBS_ClearITPendingBit                 0x0000106d   Thumb Code   100  ht6xxx_tbs.o(i.HT_TBS_ClearITPendingBit)
+    HT_TBS_ITFlagStatusGet                   0x00001111   Thumb Code   110  ht6xxx_tbs.o(i.HT_TBS_ITFlagStatusGet)
+    HT_TMR_ClearITPendingBit                 0x000011c1   Thumb Code   100  ht6xxx_timer.o(i.HT_TMR_ClearITPendingBit)
+    HT_TMR_ITFlagStatusGet                   0x00001275   Thumb Code   118  ht6xxx_timer.o(i.HT_TMR_ITFlagStatusGet)
+    HT_UART_ClearITPendingBit                0x0000133d   Thumb Code    84  ht6xxx_uart&7816.o(i.HT_UART_ClearITPendingBit)
+    HT_UART_ITFlagStatusGet                  0x000013e9   Thumb Code    96  ht6xxx_uart&7816.o(i.HT_UART_ITFlagStatusGet)
+    RTC_IRQHandler                           0x000014a1   Thumb Code    28  ht6xxx_it.o(i.RTC_IRQHandler)
+    SPI0_IRQHandler                          0x000014c5   Thumb Code    44  ht6xxx_it.o(i.SPI0_IRQHandler)
+    SPI1_IRQHandler                          0x000014f5   Thumb Code    44  ht6xxx_it.o(i.SPI1_IRQHandler)
+    SPI2_IRQHandler                          0x00001525   Thumb Code    44  ht6xxx_it.o(i.SPI2_IRQHandler)
+    SPI3_IRQHandler                          0x00001555   Thumb Code    44  ht6xxx_it.o(i.SPI3_IRQHandler)
+    TBS_IRQHandler                           0x00001585   Thumb Code   238  ht6xxx_it.o(i.TBS_IRQHandler)
+    TIMER_0_IRQHandler                       0x00001675   Thumb Code    96  ht6xxx_it.o(i.TIMER_0_IRQHandler)
+    TIMER_1_IRQHandler                       0x000016d9   Thumb Code    96  ht6xxx_it.o(i.TIMER_1_IRQHandler)
+    TIMER_2_IRQHandler                       0x0000173d   Thumb Code    96  ht6xxx_it.o(i.TIMER_2_IRQHandler)
+    TIMER_3_IRQHandler                       0x000017a1   Thumb Code   114  ht6xxx_it.o(i.TIMER_3_IRQHandler)
+    TIMER_4_IRQHandler                       0x00001815   Thumb Code   116  ht6xxx_it.o(i.TIMER_4_IRQHandler)
+    TIMER_5_IRQHandler                       0x0000188d   Thumb Code   116  ht6xxx_it.o(i.TIMER_5_IRQHandler)
+    UART0_IRQHandler                         0x00001905   Thumb Code    44  ht6xxx_it.o(i.UART0_IRQHandler)
+    UART1_IRQHandler                         0x00001935   Thumb Code    44  ht6xxx_it.o(i.UART1_IRQHandler)
+    UART2_IRQHandler                         0x00001965   Thumb Code    44  ht6xxx_it.o(i.UART2_IRQHandler)
+    UART3_IRQHandler                         0x00001995   Thumb Code   104  ht6xxx_it.o(i.UART3_IRQHandler)
+    UART4_IRQHandler                         0x00001a01   Thumb Code   104  ht6xxx_it.o(i.UART4_IRQHandler)
+    UART5_IRQHandler                         0x00001a6d   Thumb Code    44  ht6xxx_it.o(i.UART5_IRQHandler)
+    UART6_IRQHandler                         0x00001a99   Thumb Code    44  ht6xxx_it.o(i.UART6_IRQHandler)
+    __scatterload_copy                       0x00001ac9   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_zeroinit                   0x00001ad7   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    assert_failed                            0x00001ae5   Thumb Code     4  main.o(i.assert_failed)
+    main                                     0x00001ae9   Thumb Code     8  main.o(i.main)
+    Region$$Table$$Base                      0x00001af0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00001b00   Number         0  anon$$obj.o(Region$$Table)
+    __initial_sp                             0x20004000   Data           0  startup_ht633x.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000d1
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00001b00, Max: 0x00080000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00001b00, Max: 0x00080000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x000000d0   Data   RO          134    RESET               startup_ht633x.o
+    0x000000d0   0x00000000   Code   RO         1934  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x000000d0   0x00000004   Code   RO         1949    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x000000d4   0x00000004   Code   RO         1952    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x000000d8   0x00000000   Code   RO         1954    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x000000d8   0x00000000   Code   RO         1956    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x000000d8   0x00000008   Code   RO         1957    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x000000e0   0x00000000   Code   RO         1959    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x000000e0   0x00000000   Code   RO         1961    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x000000e0   0x00000004   Code   RO         1950    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x000000e4   0x0000001c   Code   RO          136    .text               startup_ht633x.o
+    0x00000100   0x00000024   Code   RO         1972    .text               mc_w.l(init.o)
+    0x00000124   0x00000040   Code   RO         1656    i.AES_IRQHandler    ht6xxx_it.o
+    0x00000164   0x00000008   Code   RO         1657    i.DMA_IRQHandler    ht6xxx_it.o
+    0x0000016c   0x000001a6   Code   RO         1658    i.DMA_IRQProc       ht6xxx_it.o
+    0x00000312   0x00000024   Code   RO         1659    i.EXTI0_IRQHandler  ht6xxx_it.o
+    0x00000336   0x000000b8   Code   RO         1660    i.EXTI10_14_IRQHandler  ht6xxx_it.o
+    0x000003ee   0x00000026   Code   RO         1661    i.EXTI1_IRQHandler  ht6xxx_it.o
+    0x00000414   0x00000026   Code   RO         1662    i.EXTI2_IRQHandler  ht6xxx_it.o
+    0x0000043a   0x00000026   Code   RO         1663    i.EXTI3_IRQHandler  ht6xxx_it.o
+    0x00000460   0x00000026   Code   RO         1664    i.EXTI4_IRQHandler  ht6xxx_it.o
+    0x00000486   0x00000026   Code   RO         1665    i.EXTI5_IRQHandler  ht6xxx_it.o
+    0x000004ac   0x00000026   Code   RO         1666    i.EXTI6_IRQHandler  ht6xxx_it.o
+    0x000004d2   0x00000070   Code   RO         1667    i.EXTI7_9_IRQHandler  ht6xxx_it.o
+    0x00000542   0x00000002   PAD
+    0x00000544   0x00000070   Code   RO          148    i.HT_AES_GHASH_RAND_ClearITPendingBit  ht6xxx_aes&rand.o
+    0x000005b4   0x0000007c   Code   RO          150    i.HT_AES_GHASH_RAND_ITFlagStatusGet  ht6xxx_aes&rand.o
+    0x00000630   0x00000070   Code   RO          259    i.HT_CMU_StopFlagGet  ht6xxx_cmu.o
+    0x000006a0   0x000000e4   Code   RO          387    i.HT_DMA_ClearITPendingBit  ht6xxx_dma.o
+    0x00000784   0x000000f0   Code   RO          390    i.HT_DMA_ITFlagStatusGet  ht6xxx_dma.o
+    0x00000874   0x00000070   Code   RO          436    i.HT_ECC_ClearITPendingBit  ht6xxx_ecc.o
+    0x000008e4   0x00000074   Code   RO          442    i.HT_ECC_ITFlagStatusGet  ht6xxx_ecc.o
+    0x00000958   0x000000cc   Code   RO          537    i.HT_EXTIFall_ClearITPendingBit  ht6xxx_exti.o
+    0x00000a24   0x000000d4   Code   RO          539    i.HT_EXTIFall_ITFlagStatusGet  ht6xxx_exti.o
+    0x00000af8   0x000000dc   Code   RO          540    i.HT_EXTIRise_ClearITPendingBit  ht6xxx_exti.o
+    0x00000bd4   0x000000e0   Code   RO          542    i.HT_EXTIRise_ITFlagStatusGet  ht6xxx_exti.o
+    0x00000cb4   0x00000010   Code   RO         1614    i.HT_FreeDog        ht6xxx_wdt.o
+    0x00000cc4   0x00000002   Code   RO          772    i.HT_I2C_IRQHandler_Default  ht6xxx_iic.o
+    0x00000cc6   0x00000002   PAD
+    0x00000cc8   0x00000080   Code   RO         1469    i.HT_ISO7816_ClearITPendingBit  ht6xxx_uart&7816.o
+    0x00000d48   0x0000008c   Code   RO         1471    i.HT_ISO7816_ITFlagStatusGet  ht6xxx_uart&7816.o
+    0x00000dd4   0x00000060   Code   RO          924    i.HT_PMU_ClearITPendingBit  ht6xxx_pmu.o
+    0x00000e34   0x0000006c   Code   RO          932    i.HT_PMU_ITFlagStatusGet  ht6xxx_pmu.o
+    0x00000ea0   0x000000a0   Code   RO         1221    i.HT_SPI_ClearITPendingBit  ht6xxx_spi.o
+    0x00000f40   0x00000004   Code   RO         1668    i.HardFault_Handler  ht6xxx_it.o
+    0x00000f44   0x00000008   Code   RO         1669    i.I2C_IRQHandler    ht6xxx_it.o
+    0x00000f4c   0x00000016   Code   RO         1670    i.NMI_Handler       ht6xxx_it.o
+    0x00000f62   0x00000052   Code   RO         1671    i.PMU_IRQHandler    ht6xxx_it.o
+    0x00000fb4   0x00000002   Code   RO         1672    i.PendSV_Handler    ht6xxx_it.o
+    0x00000fb6   0x00000002   Code   RO         1678    i.SVC_Handler       ht6xxx_it.o
+    0x00000fb8   0x00000002   Code   RO         1679    i.SelfTestFreq_IRQHandler  ht6xxx_it.o
+    0x00000fba   0x00000002   Code   RO         1680    i.SysTick_Handler   ht6xxx_it.o
+    0x00000fbc   0x00000002   Code   RO            4    i.SystemInit        system_ht6xxx.o
+    0x00000fbe   0x00000002   Code   RO         1977    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00000fc0   0x00000004   Code   RO          135    .ARM.__at_0x0FC0    startup_ht633x.o
+    0x00000fc4   0x000000a8   Code   RO         1222    i.HT_SPI_ITFlagStatusGet  ht6xxx_spi.o
+    0x0000106c   0x000000a4   Code   RO         1279    i.HT_TBS_ClearITPendingBit  ht6xxx_tbs.o
+    0x00001110   0x000000b0   Code   RO         1283    i.HT_TBS_ITFlagStatusGet  ht6xxx_tbs.o
+    0x000011c0   0x000000b4   Code   RO         1380    i.HT_TMR_ClearITPendingBit  ht6xxx_timer.o
+    0x00001274   0x000000c8   Code   RO         1386    i.HT_TMR_ITFlagStatusGet  ht6xxx_timer.o
+    0x0000133c   0x000000ac   Code   RO         1475    i.HT_UART_ClearITPendingBit  ht6xxx_uart&7816.o
+    0x000013e8   0x000000b8   Code   RO         1477    i.HT_UART_ITFlagStatusGet  ht6xxx_uart&7816.o
+    0x000014a0   0x00000024   Code   RO         1673    i.RTC_IRQHandler    ht6xxx_it.o
+    0x000014c4   0x00000030   Code   RO         1674    i.SPI0_IRQHandler   ht6xxx_it.o
+    0x000014f4   0x00000030   Code   RO         1675    i.SPI1_IRQHandler   ht6xxx_it.o
+    0x00001524   0x00000030   Code   RO         1676    i.SPI2_IRQHandler   ht6xxx_it.o
+    0x00001554   0x00000030   Code   RO         1677    i.SPI3_IRQHandler   ht6xxx_it.o
+    0x00001584   0x000000ee   Code   RO         1681    i.TBS_IRQHandler    ht6xxx_it.o
+    0x00001672   0x00000002   PAD
+    0x00001674   0x00000064   Code   RO         1682    i.TIMER_0_IRQHandler  ht6xxx_it.o
+    0x000016d8   0x00000064   Code   RO         1683    i.TIMER_1_IRQHandler  ht6xxx_it.o
+    0x0000173c   0x00000064   Code   RO         1684    i.TIMER_2_IRQHandler  ht6xxx_it.o
+    0x000017a0   0x00000072   Code   RO         1685    i.TIMER_3_IRQHandler  ht6xxx_it.o
+    0x00001812   0x00000002   PAD
+    0x00001814   0x00000078   Code   RO         1686    i.TIMER_4_IRQHandler  ht6xxx_it.o
+    0x0000188c   0x00000078   Code   RO         1687    i.TIMER_5_IRQHandler  ht6xxx_it.o
+    0x00001904   0x00000030   Code   RO         1688    i.UART0_IRQHandler  ht6xxx_it.o
+    0x00001934   0x00000030   Code   RO         1689    i.UART1_IRQHandler  ht6xxx_it.o
+    0x00001964   0x00000030   Code   RO         1690    i.UART2_IRQHandler  ht6xxx_it.o
+    0x00001994   0x0000006c   Code   RO         1691    i.UART3_IRQHandler  ht6xxx_it.o
+    0x00001a00   0x0000006c   Code   RO         1692    i.UART4_IRQHandler  ht6xxx_it.o
+    0x00001a6c   0x0000002c   Code   RO         1693    i.UART5_IRQHandler  ht6xxx_it.o
+    0x00001a98   0x00000030   Code   RO         1694    i.UART6_IRQHandler  ht6xxx_it.o
+    0x00001ac8   0x0000000e   Code   RO         1976    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00001ad6   0x0000000e   Code   RO         1978    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00001ae4   0x00000004   Code   RO         1907    i.assert_failed     main.o
+    0x00001ae8   0x00000008   Code   RO         1908    i.main              main.o
+    0x00001af0   0x00000010   Data   RO         1974    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00004000, Max: 0x00014000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00004000   Zero   RW          132    STACK               startup_ht633x.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       236        136          0          0          0       1322   ht6xxx_aes&rand.o
+       112         66          0          0          0        641   ht6xxx_cmu.o
+       468        130          0          0          0       1428   ht6xxx_dma.o
+       228        128          0          0          0       1260   ht6xxx_ecc.o
+       860        258          0          0          0       2940   ht6xxx_exti.o
+         2          0          0          0          0        516   ht6xxx_iic.o
+      2750         68          0          0          0      19863   ht6xxx_it.o
+       204        128          0          0          0       1236   ht6xxx_pmu.o
+       328        154          0          0          0       1836   ht6xxx_spi.o
+       340        130          0          0          0       1348   ht6xxx_tbs.o
+       380        162          0          0          0       1844   ht6xxx_timer.o
+       624        324          0          0          0       3290   ht6xxx_uart&7816.o
+        16          6          0          0          0        489   ht6xxx_wdt.o
+        12          0          0          0          0       1279   main.o
+        32         12        208          0      16384        840   startup_ht633x.o
+         2          0          0          0          0      95773   system_ht6xxx.o
+
+    ----------------------------------------------------------------------
+      6602       1702        224          0      16384     135905   Object Totals
+         0          0         16          0          0          0   (incl. Generated)
+         8          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+
+    ----------------------------------------------------------------------
+        86         16          0          0          0         68   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+        86         16          0          0          0         68   mc_w.l
+
+    ----------------------------------------------------------------------
+        86         16          0          0          0         68   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      6688       1718        224          0      16384     132645   Grand Totals
+      6688       1718        224          0      16384     132645   ELF Image Totals
+      6688       1718        224          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 6912 (   6.75kB)
+    Total RW  Size (RW Data + ZI Data)             16384 (  16.00kB)
+    Total ROM Size (Code + RO Data + RW Data)       6912 (   6.75kB)
+
+==============================================================================
+
